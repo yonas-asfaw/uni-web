@@ -4,12 +4,14 @@
         <meta name="viewpoint" content="with=device-width, intial-scale=1.0">
         <title>University Website Design</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
     <body>
          <section class="header">
                   <nav>
                     <a href="index.html"><img src="image/logo.png"></a>
-                    <div class="nav-links">
+                    <div class="nav-links" id="navlinks">
+                        <i class="fa-solid fa-xmark" onclick="hidem()"></i>
                         <ul>
                             <li>
                              <a href="">Home</a> </li>
@@ -20,6 +22,7 @@
                             
                         </ul>
                     </div>
+                    <i class="fa-solid fa-bars" onclick="hides()"></i>
                   </nav>
                   <div class="text-box">
                     <h1>Worlds Biggest University </h1>
@@ -28,6 +31,18 @@
                         . Nam ullamcorper et lectus nec fringilla. Etiam sed vulputate magna, quis pharetra magna. Duis a efficitur ipsum.</p>
                         <a class="hero-btn" href="">Visit Us to Know More</a>
                   </div>
-         </section>   
+         </section>  
+         <script>
+            var navlinks = document.getElementById("navlinks");
+            function hidem(){
+                console.log(navlinks);
+                navlinks.style.right="-200px";
+
+            }
+            function hides(){
+                navlinks.style.right="0";
+                
+            }
+         </script>
     </body>
 </html>
